@@ -1,0 +1,50 @@
+$mr: "MR";
+$smb: "SMB";
+$mb: "MB";
+$mbi: "MBI";
+$tb: "TB";
+$tbi: "TBI";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: $mr;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    &::before, &::after {
+        font-family: 'Font Awesome';
+    }
+}
+
+body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background: #151437;
+}
+
+img {
+    display: block;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+@import "fonts";
+@import "grid";
+@import "header";
+@import "modal";
+@import "carouselItem";
+@import "human";
+@import "capabilities";
+@import "accordion";
+@import "tabLink";
+@import "footer";

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "MR";
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "SMB";
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "MB";
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "MBI";
+    src: url(../fonts/Montserrat-BoldItalic.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "TB";
+    src: url(../fonts/Trebuchet-ms-bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "TBI";
+    src: url(../fonts/TrebuchetMs-bold-italic.ttf);
+    font-weight: 700;
+}
+
+$FontAwesome: ('brands-400', 400),
+              ('duotone-900', 900),
+              ('light-300', 300),
+              ('regular-400', 401),
+              ('solid-900', 901);
+
+@each $name, $weight in $FontAwesome {
+    @font-face {
+        font-family: 'Font Awesome';
+        src: url(../fonts/FontAwesome/fa-#{$name}.ttf);
+        font-weight: $weight;
+    }
+}

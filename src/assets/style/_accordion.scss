@@ -1,0 +1,78 @@
+.icon__arrow-top{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    transition: 500ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    top: 0;
+}
+
+.icon__arrow-top::after {
+    content: "\f0de";
+    font-weight: 901;
+    color: #7177F1;
+    font-size: 25px;
+}
+.icon__arrow-top.rotate::after {
+    content: "\f0de";
+    font-weight: 901;
+    color: white;
+    font-size: 25px;
+}
+
+.accordion {
+    &__btn {
+        background: none;
+        max-width: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        cursor: pointer;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 15px;
+        & span {
+            color: #7177F1;
+            font-size: 18px;
+            font-family: $mb;
+            font-weight: 900;
+            margin-left: 20px;
+            transition: 300ms;
+            &.color {
+                color: white;
+            }
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__title {
+        padding: 15px 0;
+    }
+
+    &__nobody {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: 300ms;
+    }
+    &__body {
+        border-radius: 0px 0px 8px 8px;
+        background: #7177F1;
+        box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+        color: white;
+        font-size: 18px;
+        font-family: $mr;
+        line-height: 27px;
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+        padding: 25px;
+    }
+}

@@ -1,0 +1,186 @@
+.icon {
+    &__facebook {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms;
+        background: linear-gradient(45deg, black, transparent);
+        color: rgb(162, 162, 162);
+        @include media($xs) {
+            width: 30px;
+            height: 30px;
+        }
+        &:hover {
+            transform: scale(1.2);
+            background: linear-gradient(45deg, #3578E5, transparent);
+            box-shadow: 0 0 10px #fff;
+            color: white;
+        }
+        &::before {
+            content: '\f082';
+            font-weight: 400;
+            font-size: 30px;
+            @include media($xs) {
+                font-size: 20px;
+            }
+        }
+    }
+    &__instagram {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms;
+        background: linear-gradient(45deg, black, transparent);
+        color: rgb(162, 162, 162);
+        @include media($xs) {
+            width: 30px;
+            height: 30px;
+        }
+        &:hover {
+            transform: scale(1.2);
+            background: linear-gradient(45deg, #fe860b, #d31c3e, #fa61fd);
+            box-shadow: 0 0 10px #fff;
+            color: white;
+        }
+        &::before {
+            content: '\f16d';
+            font-weight: 400;
+            font-size: 30px;
+            @include media($xs) {
+                font-size: 20px;
+            }
+        }
+    }
+    &__telegram {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms;
+        background: linear-gradient(45deg, black, transparent);
+        color: rgb(162, 162, 162);
+        @include media($xs) {
+            width: 30px;
+            height: 30px;
+        }
+        &:hover {
+            transform: scale(1.2);
+            background: linear-gradient(45deg, #1c78d5, #05c6ff);
+            box-shadow: 0 0 10px #fff;
+            color: white;
+        }
+        &::before {
+            content: '\f3fe';
+            font-weight: 400;
+            font-size: 30px;
+            @include media($xs) {
+                font-size: 20px;
+            }
+        }
+    }
+    &__close::before {
+        content: "\f00d";
+        font-weight: 901;
+    }
+}
+
+.header__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    z-index: 9999;
+    &-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: #7177F1;
+        border-radius: 10px;
+        box-shadow: 0 0 30px #fff;
+        padding: 30px;
+        max-width: 600px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        z-index: 999;
+    }
+    &-title {
+        color: white;
+        font-size: 40px;
+        font-family: $mr;
+        line-height: 55px;
+        @include media($xs) {
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+    &-text {
+        color: white;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: $mr;
+        text-align: center;
+        margin: 20px 0;
+        & span {
+            margin-top: 10px;
+            display: inline-block;
+        }
+        @include media($xs) {
+            font-size: 14px;
+            line-height: 18px;
+            margin: 15px 0;
+        }
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        @include media($xs) {
+            gap: 20px;
+        }
+    }
+    &-btn {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: white;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        transition: 300ms;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        &:hover {
+            transform: rotate(-360deg) scale(1.5);
+            background: rgb(208, 0, 255);
+            color: white;
+        }
+    }
+}
+
+.header__modal-enter-active,
+.header__modal-leave-active {
+  transition: .3s linear;
+}
+
+.header__modal-enter-from,
+.header__modal-leave-to {
+  opacity: 0;
+  transform: scale(1.5);
+}
